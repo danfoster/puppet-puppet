@@ -135,4 +135,7 @@ class puppet::params {
 
   # Puppet service name
   $service_name = 'puppet'
+
+  # Which Parser do we want to use? https://docs.puppetlabs.com/references/latest/configuration.html#parser
+  $server_parser = 'current'
 }

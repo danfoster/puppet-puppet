@@ -202,6 +202,9 @@
 #                                  when accessing undeclared variables.
 #                                  type:boolean
 #
+# $server_parser::                 Sets the parser to use. Valid options are 'current' or 'future'.
+#                                  Defaults to 'current'.
+#
 # === Advanced server parameters:
 #
 # $server_httpd_service::          Apache/httpd service name to notify
@@ -362,6 +365,7 @@ class puppet (
   $server_facts                  = $foreman::params::facts,
   $server_puppet_home            = $foreman::params::puppet_home,
   $server_puppet_basedir         = $foreman::params::puppet_basedir
+  $server_parser                 = $puppet::params::server_parser,
 ) inherits puppet::params {
 
   validate_bool($listen)
